@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89d89047-1193-4173-8e14-fcb2a6510cbf" name="Changes" comment="Creando arquitectura del proyecto">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="89d89047-1193-4173-8e14-fcb2a6510cbf" name="Changes" comment="Creando arquitectura del proyecto" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +92,6 @@
       <updated>1747353778612</updated>
       <workItem from="1747353779844" duration="1957000" />
       <workItem from="1747355849638" duration="197000" />
-      <workItem from="1747356111524" duration="287000" />
     </task>
     <task id="LOCAL-00001" summary="Creando arquitectura del proyecto">
       <option name="closed" value="true" />
