@@ -1,4 +1,4 @@
-package com.example.watchapp.Incident.IncidentDTO;
+package com.example.watchapp.Incident.dto;
 
 import com.example.watchapp.Incident.domain.IncidentType;
 import com.example.watchapp.Incident.domain.Priority;
@@ -13,7 +13,7 @@ public class IncidentDTO {
     private Priority priority;
     private Status status;
     private String emoji;
-    private String reportedAt;
+    private String timestamp;
     private Long userId;
     private Long locationId;
 }

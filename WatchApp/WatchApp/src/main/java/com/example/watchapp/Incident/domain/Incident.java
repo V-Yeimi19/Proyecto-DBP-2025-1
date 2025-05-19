@@ -28,7 +28,7 @@ public class Incident {
 
     private String emoji;
 
-    private LocalDateTime reportedAt;
+    private LocalDateTime timestamp;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
