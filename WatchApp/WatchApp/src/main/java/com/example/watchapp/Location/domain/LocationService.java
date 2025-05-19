@@ -17,27 +17,23 @@ public class LocationService {
     @Autowired
     private ModelMapper modelMapper;
 
-    // Create Location
     public LocationDTO createLocation(LocationDTO locationDTO) {
         Location location = modelMapper.map(locationDTO, Location.class);
         Location savedLocation = locationRepository.save(location);
         return modelMapper.map(savedLocation, LocationDTO.class);
     }
 
-    // Get All Locations
     public List<LocationDTO> getAllLocations() {
         return locationRepository.findAll().stream()
                 .map(location -> modelMapper.map(location, LocationDTO.class))
                 .collect(Collectors.toList());
     }
 
-    // Get Location by ID
     public LocationDTO getLocationById(Long id) {
         Location location = locationRepository.findById(id).orElseThrow(() -> new RuntimeException("Location not found"));
         return modelMapper.map(location, LocationDTO.class);
     }
 
-    // Update Location
     public LocationDTO updateLocation(Long id, LocationDTO locationDTO) {
         Location location = locationRepository.findById(id).orElseThrow(() -> new RuntimeException("Location not found"));
         modelMapper.map(locationDTO, location);
@@ -45,7 +41,6 @@ public class LocationService {
         return modelMapper.map(location, LocationDTO.class);
     }
 
-    // Delete Location
     public void deleteLocation(Long id) {
         locationRepository.deleteById(id);
     }
