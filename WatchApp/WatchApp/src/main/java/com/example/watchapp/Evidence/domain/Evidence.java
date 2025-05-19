@@ -1,6 +1,7 @@
-package com.example.watchapp.domain;
+package com.example.watchapp.Evidence.domain;
 
 
+import com.example.watchapp.Incident.domain.Incident;
 import jakarta.persistence.*;
 import lombok.Data;
 

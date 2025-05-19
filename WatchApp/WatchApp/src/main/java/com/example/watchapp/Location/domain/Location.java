@@ -1,4 +1,4 @@
-package com.example.watchapp.domain;
+package com.example.watchapp.Location.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;

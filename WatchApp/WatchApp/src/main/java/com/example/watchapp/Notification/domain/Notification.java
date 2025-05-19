@@ -1,5 +1,7 @@
-package com.example.watchapp.domain;
+package com.example.watchapp.Notification.domain;
 
+import com.example.watchapp.Incident.domain.Incident;
+import com.example.watchapp.User.domain.User;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;

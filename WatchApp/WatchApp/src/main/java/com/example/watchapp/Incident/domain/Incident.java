@@ -1,5 +1,7 @@
-package com.example.watchapp.domain;
+package com.example.watchapp.Incident.domain;
 
+import com.example.watchapp.User.domain.User;
+import com.example.watchapp.Location.domain.Location;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;
