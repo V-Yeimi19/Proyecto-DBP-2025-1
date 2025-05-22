@@ -5,7 +5,7 @@ import com.example.watchapp.Incident.dto.IncidentDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.context.ApplicationEventPublisher;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,15 +13,21 @@ import java.util.stream.Collectors;
 public class IncidentService {
     @Autowired
     private IncidentRepository incidentRepository;
-
+    @Autowired
+    private ApplicationEventPublisher eventPublisher;
     @Autowired
     private ModelMapper modelMapper;
 
     public IncidentDTO createIncident(IncidentDTO incidentDTO) {
         Incident incident = modelMapper.map(incidentDTO, Incident.class);
         Incident savedIncident = incidentRepository.save(incident);
+
+        // 🔔 Publicar evento después de guardar
+        eventPublisher.publishEvent(new IncidentCreatedEvent(this, savedIncident));
+
         return modelMapper.map(savedIncident, IncidentDTO.class);
     }
+
 
     public List<IncidentDTO> getAllIncidents() {
         return incidentRepository.findAll().stream()
@@ -45,3 +51,4 @@ public class IncidentService {
         incidentRepository.deleteById(id);
     }
 }
+
